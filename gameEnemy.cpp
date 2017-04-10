@@ -13,7 +13,7 @@ class Enemy{
 	string name;
 	int hp;
 	int maxHp;
-	int strength;œœ
+	int strength;
 	int exp;
 	
 	public :
@@ -33,10 +33,4 @@ class Enemy{
 	
 };
 
-
-int main(){
-
-
-	return 0;
-}
 
