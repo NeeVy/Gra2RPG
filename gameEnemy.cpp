@@ -33,4 +33,5 @@ class Enemy{
 	
 };
 
+Enemy jozek("Jozef", 50, 3, 30);
 

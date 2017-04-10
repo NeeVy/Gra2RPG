@@ -6,7 +6,7 @@
 #include <cstdlib>
 #include <iomanip> 
 #include <algorithm>
-#include "gameName.cpp"
+#include "gameEnemy.cpp"
 #include "grapostac.cpp"
 
 using namespace std;
