@@ -96,10 +96,4 @@ class Stachu{
 	}
 };
 
-int main()
-{
-	Stachu p("Stachu", 1 ,100);
-	p.AddExp(0);
-	p.ShowStats();
-}
 
