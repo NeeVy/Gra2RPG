@@ -23,9 +23,10 @@ class Map{
 			
 		}
 		
-		void ShowMap(){
+		void ShowMap(Stachu player){
 			for(int i = 0; i < 30; i++){
 				for(int j = 0; j < 50; j++){
+					
 					if(data[i][j] == '#')
 						SetTextColor(c_green);
 					else if(data[i][j] == '@')
@@ -42,4 +43,28 @@ class Map{
 		}
 		
 };
+
+Map map;
+
+void Walk(){
+	char key;
+	getch() >> key;
+	if(key == 'w')
+		
+	else if(key == 's')
+	
+	else if(key == 'a')
+	
+	else if(key == 'd')
+	
+	else
+		break;
+	
+	map.ShowMap();
+}
+
+
+
+
+
 

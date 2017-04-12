@@ -13,7 +13,7 @@
 using namespace std;
 
 int main(){
-	Map map;
+
 	
 	map.LoadMainMap();
 	map.ShowMap();
