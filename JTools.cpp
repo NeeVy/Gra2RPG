@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include <iomanip> 
 #include <algorithm>
+#include <windows.h>
 
 using namespace std;
 

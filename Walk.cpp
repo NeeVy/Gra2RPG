@@ -7,6 +7,7 @@
 #include <iomanip> 
 #include <algorithm>
 #include "JTools.cpp"
+#include "grapostac.cpp"
 
 using namespace std;
 
@@ -23,7 +24,7 @@ class Map{
 			
 		}
 		
-		void ShowMap(Stachu player){
+		void ShowMap(){
 			for(int i = 0; i < 30; i++){
 				for(int j = 0; j < 50; j++){
 					
@@ -53,15 +54,15 @@ void Walk(){
 	char key;
 	getch() >> key;
 	if(key == 'w')
-		
+		;
 	else if(key == 's')
-	
+	;
 	else if(key == 'a')
-	
+	;
 	else if(key == 'd')
-	
+	;
 	else
-		break;
+		return;
 	
 	map.ShowMap();
 }

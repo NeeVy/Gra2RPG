@@ -3,11 +3,10 @@
 #include <string>
 #include <fstream> 
 #include <ctime> 
-#include <cstdlib>o
+#include <cstdlib>
 #include <iomanip> 
 #include <algorithm>
 #include "gameEnemy.cpp"
-#include "grapostac.cpp"
 #include "Walk.cpp"
 
 using namespace std;
