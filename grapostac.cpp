@@ -23,6 +23,7 @@ class Stachu{
 	int exp;
 	int maxexp;
 	int posX, posY;
+	
 	Stachu(string name, int strength, int maxhp){
 		this -> name = name;
 		this -> strength = strength;
