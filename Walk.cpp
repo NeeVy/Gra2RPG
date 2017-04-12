@@ -28,8 +28,12 @@ class Map{
 				for(int j = 0; j < 50; j++){
 					if(data[i][j] == '#')
 						SetTextColor(c_green);
-					if(data[i][j] == '@')
+					else if(data[i][j] == '@')
 						SetTextColor(c_blue);
+					else if(data[i][j] == '=')	
+						SetTextColor(c_brown);
+					else if(data[i][j] == '!')	
+						SetTextColor(c_red);
 						
 					cout << data[i][j] << " ";
 				}

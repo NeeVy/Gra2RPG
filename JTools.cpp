@@ -15,7 +15,8 @@ enum Color{
 	c_green = 10,
 	c_dGreen = 2,
 	c_white = 15,
-	c_yellow = 14
+	c_yellow = 14,
+	c_brown = 4
 };
 
 void SetTextColor(int color){
