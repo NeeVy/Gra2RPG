@@ -22,7 +22,7 @@ class Stachu{
 	int lvl;
 	int exp;
 	int maxexp;
-	
+	int posX, posY;
 	Stachu(string name, int strength, int maxhp){
 		this -> name = name;
 		this -> strength = strength;
@@ -31,6 +31,8 @@ class Stachu{
 		this -> lvl = 1;
 		this -> exp = 0;
 		this -> maxexp = 100;
+		this -> posX = 29;
+		this -> posY = 15;
 	}
 	
 	void AddExp(int amount){

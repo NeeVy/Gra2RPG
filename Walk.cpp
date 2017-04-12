@@ -33,8 +33,11 @@ class Map{
 						SetTextColor(c_blue);
 					else if(data[i][j] == '=')	
 						SetTextColor(c_brown);
-					else if(data[i][j] == '!')	
+					else if(data[i][j] == '!' || data[i][j] == 'X' || data[i][j] == 'B')	
 						SetTextColor(c_red);
+					else if(data[i][j] == 'P')
+						SetTextColor(c_white);
+					
 						
 					cout << data[i][j] << " ";
 				}
