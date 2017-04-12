@@ -8,7 +8,6 @@
 #include <algorithm>
 #include "JTools.cpp"
 #include "grapostac.cpp"
-
 using namespace std;
 
 class Map{
@@ -27,7 +26,7 @@ class Map{
 		void ShowMap(){
 			for(int i = 0; i < 30; i++){
 				for(int j = 0; j < 50; j++){
-					
+					if(player.posX == j)
 					if(data[i][j] == '#')
 						SetTextColor(c_green);
 					else if(data[i][j] == '@')
