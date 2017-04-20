@@ -6,8 +6,10 @@
 #include <cstdlib>
 #include <iomanip> 
 #include <algorithm>
-#include "JTools.cpp"
-#include "grapostac.cpp"
+#include "JTools.h"
+#include <conio.h>
+#include "grapostac.h"
+
 using namespace std;
 
 class Map{
@@ -23,10 +25,10 @@ class Map{
 			
 		}
 		
-		void ShowMap(Stachu player){
+		void ShowMap(int posX, int posY){
+			system("cls");
 			for(int i = 0; i < 30; i++){
 				for(int j = 0; j < 50; j++){
-					if(player.posX == j)
 					if(data[i][j] == '#')
 						SetTextColor(c_green);
 					else if(data[i][j] == '@')
@@ -35,11 +37,13 @@ class Map{
 						SetTextColor(c_brown);
 					else if(data[i][j] == '!' || data[i][j] == 'X' || data[i][j] == 'B')	
 						SetTextColor(c_red);
-					else if(data[i][j] == 'P')
-						SetTextColor(c_white);
 					
-						
-					cout << data[i][j] << " ";
+					if(i == posY && j == posX){
+						SetTextColor(c_white);
+						cout << "P ";
+					}
+					else
+						cout << data[i][j] << " ";
 				}
 				cout << endl;
 			}
@@ -49,25 +53,19 @@ class Map{
 
 Map map;
 
-void Walk(Stachu player){
+void Walk(Stachu &player){
 	char key;
-	getch() >> key;
+	key = getch();
 	if(key == 'w')
-		;
+		player.posY++;
 	else if(key == 's')
-	;
+		player.posY--;
 	else if(key == 'a')
-	;
+		player.posX--;
 	else if(key == 'd')
-	;
+		player.posX++;
 	else
 		return;
 	
-	map.ShowMap(player);
+	map.ShowMap(player.posX, player.posY);
 }
-
-
-
-
-
-
