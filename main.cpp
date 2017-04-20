@@ -8,14 +8,15 @@
 #include <algorithm>
 #include "gameEnemy.cpp"
 #include "Walk.cpp"
+#include "grapostac.cpp"
 
 using namespace std;
 
 int main(){
-
+	Stachu player()
 	
 	map.LoadMainMap();
-	map.ShowMap();
+	map.ShowMap(player);
 	return 0;
 }
 

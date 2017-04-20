@@ -13,7 +13,7 @@ using namespace std;
 class Map{
 	public:
 		string data[30];
-	
+	public:
 		void LoadMainMap(){
 			fstream mapFile;
 			mapFile.open("mainMap.map");
@@ -23,7 +23,7 @@ class Map{
 			
 		}
 		
-		void ShowMap(){
+		void ShowMap(Stachu player){
 			for(int i = 0; i < 30; i++){
 				for(int j = 0; j < 50; j++){
 					if(player.posX == j)
@@ -49,7 +49,7 @@ class Map{
 
 Map map;
 
-void Walk(){
+void Walk(Stachu player){
 	char key;
 	getch() >> key;
 	if(key == 'w')
@@ -63,7 +63,7 @@ void Walk(){
 	else
 		return;
 	
-	map.ShowMap();
+	map.ShowMap(player);
 }
 
 
