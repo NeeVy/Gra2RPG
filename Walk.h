@@ -10,6 +10,7 @@
 #include <conio.h>
 #include "grapostac.h"
 
+
 using namespace std;
 
 class Map{
@@ -25,22 +26,31 @@ class Map{
 			
 		}
 		
-		void ShowMap(int posX, int posY){
+		void ShowMap(Stachu &player){
 			system("cls");
-			for(int i = 0; i < 30; i++){
-				for(int j = 0; j < 50; j++){
-					if(data[i][j] == '#')
+			
+			for(int i = 0; i < 20; i++){
+				for(int j = 0; j < 30; j++){
+					if(data[i][j] == '#' && lastColor != c_green){
 						SetTextColor(c_green);
-					else if(data[i][j] == '@')
+						lastColor = c_green;
+					}
+					else if(data[i][j] == '@' && lastColor != c_blue){
 						SetTextColor(c_blue);
-					else if(data[i][j] == '=')	
+						lastColor = c_blue;					
+					}
+					else if(data[i][j] == '=' && lastColor != c_brown){
 						SetTextColor(c_brown);
-					else if(data[i][j] == '!' || data[i][j] == 'X' || data[i][j] == 'B')	
+						lastColor = c_brown;
+					}
+					else if(data[i][j] == '!' || data[i][j] == 'X' || data[i][j] == 'B'){
 						SetTextColor(c_red);
-					
-					if(i == posY && j == posX){
+						lastColor = c_red;
+					}
+					if(i == player.posY && j == player.posX){
 						SetTextColor(c_white);
 						cout << "P ";
+						lastColor = c_white;
 					}
 					else
 						cout << data[i][j] << " ";
@@ -48,18 +58,23 @@ class Map{
 				cout << endl;
 			}
 		}
-		
+		private:
+			Color lastColor = c_white;
 };
 
 Map map;
 
 void Walk(Stachu &player){
+	int lastPosX = player.posX;
+	int lastPosY = player.posY;
+	
 	char key;
 	key = getch();
+	
 	if(key == 'w')
-		player.posY++;
-	else if(key == 's')
 		player.posY--;
+	else if(key == 's')
+		player.posY++;
 	else if(key == 'a')
 		player.posX--;
 	else if(key == 'd')
@@ -67,5 +82,15 @@ void Walk(Stachu &player){
 	else
 		return;
 	
-	map.ShowMap(player.posX, player.posY);
+
+	
+	if(player.posX < 0 || player.posY < 0 || player.posY >= 20 || player.posX >= 30 ||
+		map.data[player.posY][player.posX] == '@' ||
+		map.data[player.posY][player.posX] == '^'){
+		
+		player.posX = lastPosX;
+		player.posY = lastPosY;
+	}
+	else
+		map.ShowMap(player);
 }
