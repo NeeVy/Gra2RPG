@@ -1,4 +1,3 @@
-#include "gameEnemy.h"
 #include "Walk.h"
 #include <iostream>
 #include <cstdlib>
@@ -18,7 +17,7 @@ int main(){
 	Stachu player("Stachu", 3, 100);
 	
 	map.LoadMainMap();
-	map.ShowMap(player.posX, player.posY);
+	map.ShowMap(player);
 	while(true){
 		Walk(player);
 	}

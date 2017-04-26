@@ -32,7 +32,7 @@ class Stachu{
 		this -> lvl = 1;
 		this -> exp = 0;
 		this -> maxexp = 100;
-		this -> posX = 29;
+		this -> posX = 15;
 		this -> posY = 15;
 	}
 	

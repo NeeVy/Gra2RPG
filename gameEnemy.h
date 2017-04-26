@@ -9,14 +9,13 @@
 
 using namespace std;
 class Enemy{
-	
-	string name;
-	int hp;
-	int maxHp;
-	int strength;
-	int exp;
-	
-	public :
+	public:
+		string name;
+		int hp;
+		int maxHp;
+		int strength;
+		int exp;
+		
 		Enemy(string name, int maxHp, int strength, int exp){
 			this -> name = name;
 			this -> hp = maxHp;
