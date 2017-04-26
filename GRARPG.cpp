@@ -1,4 +1,3 @@
-#include "gameEnemy.h"
 #include "Walk.h"
 #include <iostream>
 #include <cstdlib>
